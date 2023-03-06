@@ -1,5 +1,7 @@
 // import 'react-native-gesture-handler';
 
+// Ignore this component Josh
+
 // import * as React from 'react';
 // import { Button, View, Text, TouchableOpacity, Image } from 'react-native';
 

@@ -6,7 +6,7 @@ import About from "../screens/about";
 import Home from '../screens/home';
 
 // v6 navigation
-// a type of navigation called 'stack' navigation
+// a type of navigation called 'drawer' navigation
 
 const Drawer = createDrawerNavigator()
 
