@@ -8,6 +8,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../screens/home";
 import ReviewDetails from "../screens/reviewDetails";
+import HomeBuild from "./homeDrawer";
 
 // v6 navigation
 // a type of navigation called 'stack' navigation
@@ -15,33 +16,30 @@ import ReviewDetails from "../screens/reviewDetails";
 
 const Stack = createNativeStackNavigator()
 
-export default function HomeStack() {
+export default function HomeStack({ navigation }) {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator
+                screenOptions={{
+                    activeTintColor: '#e91e63',
+                    itemStyle: { marginVertical: 3 },
+                    
+                    // We will be putting a background image here
+                    
+                }}>
                 {/* Define our routers */}
                 <Stack.Screen
                     name="Home"
-                    component={Home}
+                    component={HomeBuild}
                     options={{
-                        title: 'GameZone',
-                        headerStyle: {
-                            backgroundColor: '#aaa'
-                        },
-                        headerTintColor: '#222',
-                        headerTitleStyle: {
-                            fontWeight: 'bold'
-                        }
+                        headerShown: false
                     }}
                 />
                 <Stack.Screen
                     name="Review"
-                    component={ReviewDetails} 
+                    component={ReviewDetails}
                     options={{
                         title: 'Review Details',
-                        headerStyle: {
-                            backgroundColor: '#aaa'
-                        },
                         headerTintColor: '#222',
                         headerTitleStyle: {
                             fontWeight: 'bold'
@@ -51,7 +49,7 @@ export default function HomeStack() {
             </Stack.Navigator>
         </NavigationContainer>
     )
-} 
+}
 
 
 
@@ -89,7 +87,7 @@ export default function HomeStack() {
 //         // </NavigationContainer>
 //     )
 
-// } 
+// }
 
 // export default function HomeStack() {
 //     return (
@@ -172,7 +170,7 @@ export default function HomeStack() {
 //     // defaultNavigationOptions : {
 //     //     headerStyle: {
 //     //         backgroundColor: '#aaa'
-//     //     }, 
+//     //     },
 //     //     headerTintColor: '#eee',
 //     //     headerTitleStyle: {
 //     //         fontWeight: 'bold'

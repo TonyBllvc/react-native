@@ -5,6 +5,11 @@ import { AppLoading } from 'expo';
 import React, { useState } from 'react';
 import HomeStack from './routes/homeStack';
 import AboutStack from './routes/aboutStack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
+import Home from './screens/home';
+import About from './screens/about';
+import HomeBuild from './routes/homeDrawer';
 // import { Text } from 'react-native';
 
 const getFonts = () => Font.loadAsync({
@@ -12,12 +17,15 @@ const getFonts = () => Font.loadAsync({
   'nunito-bold': require('./assets/fonts/NunitoSans-Bold.ttf')
 });
 
+
+
 export default function App() {
 
   // const [fontsLoaded, setFontsLoaded] = useState(false);
 
   return (
-    <AboutStack />
+    <HomeStack />
+
   )
 }
 
